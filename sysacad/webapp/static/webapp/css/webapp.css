@@ -1,0 +1,64 @@
+body {
+      font-family: Arial, sans-serif;
+    }
+
+    .header-container {
+      text-align: center;
+      padding: 20px;
+    }
+
+    .header-logo {
+      max-width: 200px;
+      height: auto;
+      margin-bottom: 10px;
+    }
+
+    .header-title {
+      font-size: 1.5em;
+      margin: 0;
+      color: #003366;
+    }
+
+    .header-subtitle {
+      font-size: 1.1em;
+      color: #666;
+      margin-top: 5px;
+    }
+
+    /* Estilos para la tabla del login */
+    .login-table {
+      margin: 20px auto; /* centrado horizontal + espacio vertical */
+      width: 320px;
+      border-collapse: collapse;
+    }
+
+    .login-table th {
+      background-color: #003366;
+      color: white;
+      padding: 8px;
+      text-align: center;
+    }
+
+    .login-table td {
+      padding: 8px;
+    }
+
+    .login-table input[type="text"],
+    .login-table input[type="password"] {
+      width: 100%;
+      padding: 5px;
+      box-sizing: border-box;
+    }
+
+    .login-table input[type="submit"] {
+      background-color: #003366;
+      color: white;
+      border: none;
+      padding: 8px 12px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .login-table input[type="submit"]:hover {
+      background-color: #0055aa;
+    }
