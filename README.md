@@ -94,8 +94,8 @@ http://127.0.0.1:8000/
 ## Flujo completo desde cero
 
 ```bash
-git clone <URL_DEL_REPO>
-cd <NOMBRE_DEL_REPO>
+git clone https://github.com/Kurse12/Sysacad.git
+cd Sysacad
 python -m venv env
 source env/bin/activate  # o env\Scripts\activate en Windows
 pip install -r requirements.txt
