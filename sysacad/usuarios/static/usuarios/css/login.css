@@ -30,13 +30,7 @@ body {
 .form-table {
     width: 320px;
     margin: 20px auto;
-    border: 1px solid #00a2a7;
-    border-radius: 10px;
-    border-collapse: separate; /* necesario para que se vea el radio */
-    border-spacing: 0;
-    overflow: hidden; /* recorta esquinas internas rectas */
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
+
 }
 
 .form-table th {
@@ -44,25 +38,13 @@ body {
     color: white;
     padding: 10px;
     text-align: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px ;
 }
 
 .form-table td {
     color: whitesmoke;
     text-align: center;
-}
-
-.form-table ul {
-    display: inline-block;
-    text-align: left;
-    list-style: disc ;
-    margin: 5px 5px;
-    /* padding: 10px; */
-    padding-right: 10px;
-}
-
-.form-table li {
-    margin: 5px 0;
-    padding: 5px 0 0 0;
 }
 
     .form-table input[type="text"],
@@ -85,18 +67,4 @@ body {
 
     .login-table input[type="submit"]:hover {
       background-color: #0055aa;
-    }
-
-    a{
-        color: whitesmoke;
-        text-decoration: none;
-        transition: color 0.3s ease;
-    }
-
-    a:visited{
-        color: whitesmoke;
-        text-decoration: none;
-    }
-    a:hover{
-        color: #00a2a7;
     }

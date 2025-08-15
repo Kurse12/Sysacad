@@ -1,0 +1,43 @@
+# =========================
+# Python & Django
+# =========================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+
+# =========================
+# Entornos virtuales
+# =========================
+env/
+venv/
+
+# =========================
+# Archivos de configuración sensibles
+# =========================
+sysacad/settings.py
+sysacad/local_settings.py
+
+# =========================
+# Archivos estáticos generados
+# =========================
+staticfiles/
+media/
+
+# =========================
+# Archivos temporales y del sistema
+# =========================
+*.log
+*.pot
+*.mo
+.DS_Store
+Thumbs.db
+
+# =========================
+# IDEs y editores
+# =========================
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
