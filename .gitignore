@@ -16,8 +16,8 @@ venv/
 # =========================
 # Archivos de configuración sensibles
 # =========================
-sysacad/settings.py
-sysacad/local_settings.py
+sysacad/local_settings.py   # solo lo local con credenciales
+# sysacad/settings.py      <-- quitar esta línea para subirlo
 
 # =========================
 # Archivos estáticos generados
