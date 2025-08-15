@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu alumnos</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/global.css' %}">
+</head>
+<body>
+    <div class="header-container">
+    <img src="{% static 'img/utn.png' %}" alt="Logo UTN Avellaneda" class="header-logo">
+    <h2 class="header-title">
+    Universidad Tecnológica Nacional<br>
+    Facultad Regional Avellaneda
+    </h2>
+    <p class="header-subtitle">
+    Sistema Académico SYSACAD<br>
+    Módulo de autogestión alumnos
+    </p>
+    </div>
+<form method="GET">
+<table class="form-table">
+    <tr>
+    <th>{{user.last_name}},{{user.first_name}}</th>
+    </tr>
+    <tr>
+    <td>
+        <ul>
+        <li><a href="#">Materias del plan</a></li>
+        <li><a href="#">Estado academico</a></li>
+        <li><a href="#">Examenes</a></li>
+        <li><a href="#">Cursado/Notas de parciales/Encuestas</a></li>
+        <li><a href="#">Correlatividad para cursar</a></li>
+        <li><a href="#">Correlatividad para rendir</a></li>
+        <li><a href="#">Inscripción a examen</a></li>
+        <li><a href="#">Inscripción a cursado</a></li>
+        <li><a href="#">Cambio de Contraseña</a></li>
+        <li><a href="#">Avisos</a></li>
+        <li><a href="#">Boleto Especial Educativo</a></li>
+        <li><a href="{% url 'logout' %}">Cerrar sesión</a></li>
+        </ul>
+    </td>
+    </tr>
+</table>
+</form>
+</body>
+</html>

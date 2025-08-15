@@ -1,5 +1,6 @@
 body {
       font-family: Arial, sans-serif;
+      background-color: #041f24;
     }
 
     .header-container {
@@ -16,31 +17,32 @@ body {
     .header-title {
       font-size: 1.5em;
       margin: 0;
-      color: #003366;
+      color: #00a2a7;
     }
 
     .header-subtitle {
       font-size: 1.1em;
-      color: #666;
+      color: whitesmoke;
       margin-top: 5px;
     }
 
     /* Estilos para la tabla del login */
-    .login-table {
+    .form-table {
       margin: 20px auto; /* centrado horizontal + espacio vertical */
       width: 320px;
       border-collapse: collapse;
     }
 
-    .login-table th {
+    .form-table th {
       background-color: #003366;
-      color: white;
+      color: whitesmoke;
       padding: 8px;
       text-align: center;
     }
 
     .login-table td {
       padding: 8px;
+      color: whitesmoke;
     }
 
     .login-table input[type="text"],
@@ -52,7 +54,7 @@ body {
 
     .login-table input[type="submit"] {
       background-color: #003366;
-      color: white;
+      color: whitesmoke;
       border: none;
       padding: 8px 12px;
       cursor: pointer;

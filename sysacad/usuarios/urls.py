@@ -1,11 +1,14 @@
 from django.urls import path
 
-from usuarios.views import nuevoUsuario
+from django.contrib.auth import views as auth_views
+
+from usuarios.views import CustomLoginView
 
 
 
 app_name= 'usuarios'
 
 urlpatterns = [
-    path('nuevo/', nuevoUsuario, name='nuevo')
+    path('', CustomLoginView.as_view(), name='login'),
+    
 ]

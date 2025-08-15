@@ -16,16 +16,39 @@ Including another URLconf
 """
 from django.conf import settings
 from django.contrib import admin
+from django.shortcuts import redirect
 from django.urls import include, path
-from webapp.views import bienvenido
 from django.conf.urls.static import static
+from django.contrib.auth.views import LogoutView
+from usuarios.views import login
+from django.contrib.auth import logout
+from django.shortcuts import redirect
+
+
+def custom_logout(request):
+    logout(request)
+    return redirect('usuarios:login')
 
 urlpatterns = [
+    # panel de admin
     path('admin/', admin.site.urls),
-    path('', bienvenido, name='index'),
-    path('usuarios/', include(('usuarios.urls','usuarios'), namespace='usuarios')),
-    path('materias/', include(('materias.urls','materias'), namespace='materias')),
-    path('inscripciones/', include(('inscripciones.urls','inscripciones'), namespace='inscripciones')),
+
+    # raíz redirige al login
+    path('', lambda request: redirect('usuarios:login'), name='root_redirect'),
+
+    # app usuarios
+    path('usuarios/', include(('usuarios.urls', 'usuarios'), namespace='usuarios')),
+
+    # app materias
+    path('materias/', include(('materias.urls', 'materias'), namespace='materias')),
+
+    # app inscripciones
+    path('inscripciones/', include(('inscripciones.urls', 'inscripciones'), namespace='inscripciones')),
+
+    # app webapp (dashboards)
+    path('webapp/', include(('webapp.urls', 'webapp'), namespace='webapp')),
+    
+    path('logout/', custom_logout, name='logout'),
 ]
 
 if settings.DEBUG:

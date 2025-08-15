@@ -49,6 +49,7 @@ import os
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
 ]
+AUTH_USER_MODEL = "usuarios.Usuario"
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -59,6 +60,12 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+# La sesión expira cuando se cierra el navegador
+# SESSION_EXPIRE_AT_BROWSER_CLOSE = True
+
+# Opcional: fuerza que las cookies de sesión no sean persistentes
+# SESSION_COOKIE_AGE = 0
+# SESSION_SAVE_EVERY_REQUEST = True
 
 ROOT_URLCONF = 'sysacad.urls'
 

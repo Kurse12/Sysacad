@@ -5,12 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sysacad UTN FRA</title>
   {% load static %}
-  <link rel="stylesheet" href="{% static 'webapp/css/webapp.css' %}">
+  <link rel="stylesheet" href="{% static 'css/global.css' %}">
 </head>
 <body>
 
   <div class="header-container">
-    <img src="{% static 'img/logo.png' %}" alt="Logo UTN Avellaneda" class="header-logo">
+    <img src="{% static 'img/utn.png' %}" alt="Logo UTN Avellaneda" class="header-logo">
     <h2 class="header-title">
       Universidad Tecnológica Nacional<br>
       Facultad Regional Avellaneda
@@ -23,21 +23,19 @@
 
   <form method="POST">
     {% csrf_token %}
-    <table class="login-table">
+    <table class="form-table">
       <tr>
         <th colspan="2">Inicio de sesión</th>
       </tr>
       <tr>
         <td>Legajo:</td>
-        <td><input type="text" name="legajo" size="15"></td>
+        <td><input type="text" name="username" size="15" placeholder="Legajo"></td>
+
       </tr>
       <tr>
         <td>Contraseña:</td>
-        <td>
-          <input type="password" name="password" maxlength="12" 
-                 title="Contraseña - solo letras y números" 
-                 pattern="[0-9a-zA-Z!@#\$%\^\&amp;*_=+-]{0,12}">
-        </td>
+        <td><input type="password" name="password" maxlength="12" placeholder="Contraseña"></td>
+
       </tr>
       <tr>
         <td colspan="2" style="text-align:center;">
@@ -46,6 +44,17 @@
       </tr>
     </table>
   </form>
-<a href="{% url 'usuarios:nuevo' %}">Crear usuario</a>
+  {% if form.errors %}
+    <ul>
+        {% for field in form %}
+            {% for error in field.errors %}
+                <li>{{ error }}</li>
+            {% endfor %}
+        {% endfor %}
+        {% for error in form.non_field_errors %}
+            <li>{{ error }}</li>
+        {% endfor %}
+    </ul>
+{% endif %}
 </body>
 </html>
