@@ -5,6 +5,7 @@ from django.db import models
 class Materia(models.Model):
     codigo = models.CharField(max_length=10, unique=True)
     nombre = models.CharField(max_length=100)
+    year = models.PositiveIntegerField(null=False, blank=True, max_length=2)
     descripcion = models.TextField(blank=True, null=True)
     correlativas = models.ManyToManyField('self',
                                           symmetrical=False,

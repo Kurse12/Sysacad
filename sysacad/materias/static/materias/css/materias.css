@@ -1,0 +1,104 @@
+/* Estilos generales que se toman del CSS principal */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #041f24;
+    }
+
+    .header-container {
+    text-align: center;
+    padding: 20px;
+    }
+
+    .header-logo {
+    max-width: 200px;
+    height: auto;
+    margin-bottom: 10px;
+    }
+
+    .header-title {
+    font-size: 1.5em;
+    margin: 0;
+    color: #00a2a7;
+    }
+
+    .header-subtitle {
+    font-size: 1.1em;
+    color: whitesmoke;
+    margin-top: 5px;
+    }
+
+a, p {
+    color: whitesmoke;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:visited {
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #00a2a7;
+}
+
+/* Contenedor de la tabla */
+.tabla-container {
+    text-align: center;
+    margin: 20px;
+}
+
+/* Tabla de materias */
+.tabla-materias {
+    width: auto; /* se ajusta al contenido */
+    margin: 20px auto; /* centrada horizontalmente */
+    border: 1px solid #00a2a7;
+    border-radius: 10px;
+    border-collapse: separate;
+    border-spacing: 0;
+    overflow: hidden;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+/* Th del título */
+.tabla-materias th.table-title {
+    padding: 15px 10px;
+    font-size: 1.2em;
+    text-align: center;
+    background-color: #00a2a7;
+    color: white;
+}
+
+/* Th de Año y Materia sin padding y fondo oscuro */
+.tabla-materias thead th:not(.table-title) {
+    padding: 0;
+    text-align: center;
+    background-color: #041f24;
+    color: white;
+}
+
+/* Celdas */
+.tabla-materias td {
+    color: whitesmoke;
+    text-align: center;
+    border: 1px solid #00a2a7;
+    padding: 5px 10px;
+}
+
+/* Opcional: listas dentro de tabla si llegás a poner alguna */
+.tabla-materias ul {
+    display: inline-block;
+    text-align: left;
+    list-style: disc;
+    margin: 5px 5px;
+    padding-right: 10px;
+}
+
+.tabla-materias li {
+    margin: 5px 0;
+    padding: 5px 0 0 0;
+}
+.link-container {
+    text-align: center;
+}

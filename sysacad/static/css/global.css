@@ -87,13 +87,13 @@ body {
       background-color: #0055aa;
     }
 
-    a{
+    a, p{
         color: whitesmoke;
         text-decoration: none;
         transition: color 0.3s ease;
     }
 
-    a:visited{
+    a:visited {
         color: whitesmoke;
         text-decoration: none;
     }

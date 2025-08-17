@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Materias del plan</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'materias/css/materias.css' %}"> <!-- CSS específico -->
+</head>
+<body>
+    <div class="header-container">
+        <img src="{% static 'img/utn.png' %}" alt="Logo UTN Avellaneda" class="header-logo">
+        <h2 class="header-title">
+            Universidad Tecnológica Nacional<br>
+            Facultad Regional Avellaneda
+        </h2>
+        <p class="header-subtitle">
+            Sistema Académico SYSACAD<br>
+            Módulo de autogestión alumnos
+        </p>
+    </div>
+
+    <div class="tabla-container">
+        <table class="tabla-materias">
+            <thead>
+                <tr>
+                    <th class="table-title" colspan="2">Materias de Tecnicatura Universitaria en Programación plan 2024</th>
+                </tr>
+                <tr>
+                    <th>Año</th>
+                    <th>Materia</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for materia in materias %}
+                <tr>
+                    <td>{{ materia.year }}</td>
+                    <td>{{ materia.nombre }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <div class="link-container">
+        <a href="{% url 'webapp:menuAlumno' %}" class="volver-link">Volver al menú de alumnos</a>
+    </div>
+    
+</body>
+</html>
